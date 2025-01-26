@@ -1,12 +1,5 @@
 # Dashboard
 
-⚠️ This project is deprecated! ⚠️
-> Due to other projects taking precedence, I am no longer able to support, much less continue development, on this project.
->
-> Thank you to everyone who contributed, created issues, and much more.
->
-> Consider forking or using [minidash](https://github.com/phntxx/minidash) instead. minidash is a simpler reinterpretation of this project, complete with configuration hot-reloading and full support for customization via handlebar templates.
-
 [![Docker Cloud Build Status][shield-docker]][docker]
 [![Docker Image Size (latest)][shield-docker-image]][docker]
 [![codecov][shield-codecov]][codecov]
@@ -42,7 +35,7 @@ $ docker run -d \
   -e CLOUDFLARE_ZONE_ID=[OPTIONAL CLOUDFLARE V4 ZONE ID] \
   -e CLOUDFLARE_PURGE_TOKEN=[OPTIONAL CLOUDFLARE PURGE TOKEN] \
   -v $(pwd)/data:/app/data \
-  -p 8080:80 \
+  -p 8080:8080 \
   --name=dashboard \
   phntxx/dashboard
 ```
@@ -62,7 +55,7 @@ services:
     volumes:
       - [path to data directory]:/app/data
     ports:
-      - 8080:80
+      - 8080:8080
 ```
 
 ### Manual installation (Linux)
@@ -108,7 +101,7 @@ http {
     server {
         listen 80;
         server_name localhost; # edit as needed if using your own domain
-        root /app/;
+        root /var/www/dashboard/html/;
 
         location / {
            index index.html index.htm;
