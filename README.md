@@ -266,6 +266,32 @@ In order for the imprint-modal to show up, make sure your `data/imprint.json` re
 
 > :exclamation: I haven't quite tested this. I'm not a lawyer and I'm not responsible if you're sued for using this incorrectly.
 
+### User CSS
+
+In order to further customize the appearance of the dashboard, create a `userstyles.css` file in the data directory `data/userstyles.css` and populate it with valid css. A random example is included below.
+
+```css
+form, h2, button, div#root > div:last-child > div:last-child {display:none!important}
+
+body {max-width:90%!important}
+
+h3, a {font-family:"Iosevka NN Medium Extended"!important}
+
+h1 {font-size: 5rem!important}
+
+body {background-color:#1c1c1c!important}
+h1, h3, div, i {color:#dedede!important}
+h1, p, a {color:#ea005e!important}
+
+div {padding:0!important}
+h3 {padding-top:1rem!important}
+a {padding-left:0!important}
+ul {margin:0!important}
+
+div > a:hover {text-decoration:dotted underline!important}
+li > a > div:nth-child(2):hover {text-shadow: #dedede 0 0 15px;transition: all 0.2s ease-in-out;}
+```
+
 ## Contributing
 Please see [Contributing page](./CONTRIBUTING.md).
 
