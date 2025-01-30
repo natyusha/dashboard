@@ -24,7 +24,6 @@
     "@testing-library/user-event": "^14.0.4",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/parser": "^5.18.0",
-    "codecov": "^3.8.2",
     "eslint": "^8.13.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.1"
@@ -32,7 +31,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "coverage": "codecov -f coverage/*.json -F dashboard",
     "test": "react-scripts test",
     "typecheck": "tsc --noEmit",
     "eject": "react-scripts eject",

@@ -1,10 +1,5 @@
 # Dashboard
 
-[![Docker Cloud Build Status][shield-docker]][docker]
-[![Docker Image Size (latest)][shield-docker-image]][docker]
-[![codecov][shield-codecov]][codecov]
-[![GitHub license][shield-license]][license]
-
 ![Alt text](/screenshot.png?raw=true "screenshot")
 
 Dashboard is just that - a dashboard. It's inspired by [SUI](https://github.com/jeroenpardon/sui) and has all the same features as SUI, such as simple customization through JSON-files and a handy search bar to search the internet more efficiently.
@@ -37,7 +32,7 @@ $ docker run -d \
   -v $(pwd)/data:/app/data \
   -p 8080:8080 \
   --name=dashboard \
-  phntxx/dashboard
+  natyusha/dashboard
 ```
 
 #### Using Docker-Compose
@@ -47,7 +42,7 @@ version: "3"
 
 services:
   dashboard:
-    image: phntxx/dashboard:latest
+    image: ghcr.io/natyusha/dashboard:master
     restart: unless-stopped
     environment:
       - CLOUDFLARE_ZONE_ID=[OPTIONAL CLOUDFLARE V4 ZONE ID]
@@ -62,7 +57,7 @@ services:
 #### Clone and build
 
 ```sh
-git clone https://github.com/phntxx/dashboard.git
+git clone https://github.com/natyusha/dashboard.git
 cd dashboard
 yarn
 yarn build
@@ -266,15 +261,31 @@ In order for the imprint-modal to show up, make sure your `data/imprint.json` re
 
 > :exclamation: I haven't quite tested this. I'm not a lawyer and I'm not responsible if you're sued for using this incorrectly.
 
+### User CSS
+
+In order to further customize the appearance of the dashboard, create a `userstyles.css` file in the data directory `data/userstyles.css` and populate it with valid css. A random example is included below.
+
+```css
+form, h2, button, div#root > div:last-child > div:last-child {display:none!important}
+
+body {max-width:90%!important}
+
+h3, a {font-family:"Iosevka NN Medium Extended"!important}
+
+h1 {font-size: 5rem!important}
+
+body {background-color:#1c1c1c!important}
+h1, h3, div, i {color:#dedede!important}
+h1, p, a {color:#ea005e!important}
+
+div {padding:0!important}
+h3 {padding-top:1rem!important}
+a {padding-left:0!important}
+ul {margin:0!important}
+
+div > a:hover {text-decoration:dotted underline!important}
+li > a > div:nth-child(2):hover {text-shadow: #dedede 0 0 15px;transition: all 0.2s ease-in-out;}
+```
+
 ## Contributing
 Please see [Contributing page](./CONTRIBUTING.md).
-
-
-[docker]: https://hub.docker.com/r/phntxx/dashboard
-[codecov]: https://codecov.io/gh/phntxx/dashboard
-[repo]: https://github.com/phntxx/dashboard
-[license]: https://github.com/phntxx/dashboard/LICENSE
-[shield-docker]: https://img.shields.io/docker/cloud/build/phntxx/dashboard
-[shield-docker-image]: https://img.shields.io/docker/image-size/phntxx/dashboard/latest
-[shield-codecov]: https://codecov.io/gh/phntxx/dashboard/branch/master/graph/badge.svg
-[shield-license]: https://img.shields.io/github/license/phntxx/dashboard.svg
