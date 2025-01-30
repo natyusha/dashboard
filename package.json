@@ -6,7 +6,7 @@
   "contributors": ["natyusha <985941+natyusha@users.noreply.github.com>"],
   "private": false,
   "dependencies": {
-    "@types/node": "^17.0.23",
+    "@types/node": "^22.12.0",
     "@types/react-dom": "^18.0.0",
     "@types/styled-components": "^5.1.9",
     "browserslist": "^4.24.4",
