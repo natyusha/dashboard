@@ -23,9 +23,9 @@
     "@testing-library/react": "^15.0.5",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/parser": "^8.17.0",
     "codecov": "^3.8.2",
-    "eslint": "^8.13.0",
+    "eslint": "^9.19.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "prettier": "^3.4.2"
   },
