@@ -1,10 +1,5 @@
 # Dashboard
 
-[![Docker Cloud Build Status][shield-docker]][docker]
-[![Docker Image Size (latest)][shield-docker-image]][docker]
-[![codecov][shield-codecov]][codecov]
-[![GitHub license][shield-license]][license]
-
 ![Alt text](/screenshot.png?raw=true "screenshot")
 
 Dashboard is just that - a dashboard. It's inspired by [SUI](https://github.com/jeroenpardon/sui) and has all the same features as SUI, such as simple customization through JSON-files and a handy search bar to search the internet more efficiently.
@@ -37,7 +32,7 @@ $ docker run -d \
   -v $(pwd)/data:/app/data \
   -p 8080:8080 \
   --name=dashboard \
-  phntxx/dashboard
+  natyusha/dashboard
 ```
 
 #### Using Docker-Compose
@@ -47,7 +42,7 @@ version: "3"
 
 services:
   dashboard:
-    image: phntxx/dashboard:latest
+    image: natyusha/dashboard:master
     restart: unless-stopped
     environment:
       - CLOUDFLARE_ZONE_ID=[OPTIONAL CLOUDFLARE V4 ZONE ID]
@@ -62,7 +57,7 @@ services:
 #### Clone and build
 
 ```sh
-git clone https://github.com/phntxx/dashboard.git
+git clone https://github.com/natyusha/dashboard.git
 cd dashboard
 yarn
 yarn build
@@ -294,13 +289,3 @@ li > a > div:nth-child(2):hover {text-shadow: #dedede 0 0 15px;transition: all 0
 
 ## Contributing
 Please see [Contributing page](./CONTRIBUTING.md).
-
-
-[docker]: https://hub.docker.com/r/phntxx/dashboard
-[codecov]: https://codecov.io/gh/phntxx/dashboard
-[repo]: https://github.com/phntxx/dashboard
-[license]: https://github.com/phntxx/dashboard/LICENSE
-[shield-docker]: https://img.shields.io/docker/cloud/build/phntxx/dashboard
-[shield-docker-image]: https://img.shields.io/docker/image-size/phntxx/dashboard/latest
-[shield-codecov]: https://codecov.io/gh/phntxx/dashboard/branch/master/graph/badge.svg
-[shield-license]: https://img.shields.io/github/license/phntxx/dashboard.svg

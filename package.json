@@ -2,8 +2,8 @@
   "name": "dashboard",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "git@github.com:phntxx/dashboard",
-  "contributors": ["phntxx <hello@phntxx.com>"],
+  "repository": "git@github.com:natyusha/dashboard",
+  "contributors": ["natyusha <985941+natyusha@users.noreply.github.com>"],
   "private": false,
   "dependencies": {
     "@types/node": "^17.0.23",
