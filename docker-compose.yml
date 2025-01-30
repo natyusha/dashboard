@@ -2,7 +2,7 @@ version: "3"
 
 services:
   dashboard:
-    image: natyusha/dashboard:master
+    image: ghcr.io/natyusha/dashboard:master
     restart: unless-stopped
     volumes:
       - ./data:/app/data

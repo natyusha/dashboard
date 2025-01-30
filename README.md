@@ -42,7 +42,7 @@ version: "3"
 
 services:
   dashboard:
-    image: natyusha/dashboard:master
+    image: ghcr.io/natyusha/dashboard:master
     restart: unless-stopped
     environment:
       - CLOUDFLARE_ZONE_ID=[OPTIONAL CLOUDFLARE V4 ZONE ID]
